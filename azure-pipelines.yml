@@ -11,8 +11,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script:
-    pwd
+
     
 - task: Npm@1
   inputs:
@@ -24,7 +23,7 @@ steps:
   inputs:
     command: 'custom'
     workingDir: 'kamp-app'
-    customCommand: 'test'
+    customCommand: 'test --watch=false --code-coverage'
   displayName: 'Npm test'
 
 - task: Npm@1
