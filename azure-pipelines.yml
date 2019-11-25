@@ -16,21 +16,25 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
+    echo pwd
   displayName: 'Run a multi-line script'
 
 - task: Npm@1
   inputs:
     command: 'install'
     projects: '**/*.csproj'
+  displayName: 'Npm Install'
 
 - task: Npm@1
   inputs:
     command: 'custom'
     workingDir: 'kamp-app/'
     customCommand: 'build --production'
+  displayName: 'Npm build'
 
 - task: Npm@1
   inputs:
     command: 'custom'
     workingDir: 'kamp-app/'
     customCommand: 'dist'
+  displayName: 'Npm publish'
