@@ -32,10 +32,3 @@ steps:
     workingDir: './'
     customCommand: 'build --production'
   displayName: 'Npm build'
-
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    workingDir: './'
-    customCommand: 'dist'
-  displayName: 'Npm publish'
