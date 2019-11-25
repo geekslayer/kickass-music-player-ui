@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -29,6 +30,13 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
+    customCommand: 'test'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
     workingDir: './'
     customCommand: 'build --production'
   displayName: 'Npm build'
+
+  
