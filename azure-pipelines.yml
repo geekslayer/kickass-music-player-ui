@@ -24,13 +24,15 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    projects: '**/*.csproj'
+    workingDir: './'
   displayName: 'Npm Install'
 
 - task: Npm@1
   inputs:
     command: 'custom'
+    workingDir: './'
     customCommand: 'test'
+  displayName: 'Npm test'
 
 - task: Npm@1
   inputs:
