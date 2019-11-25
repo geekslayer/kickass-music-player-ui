@@ -11,10 +11,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- script:
+    pwd
+    
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: './'
+    workingDir: 'kamp-app'
   displayName: 'Npm Install'
 
 - task: Npm@1
