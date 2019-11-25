@@ -23,14 +23,14 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: './'
+    workingDir: 'kamp-app'
     customCommand: 'test'
   displayName: 'Npm test'
 
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: './'
+    workingDir: 'kamp-app'
     customCommand: 'build --production'
   displayName: 'Npm build'
 
