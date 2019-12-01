@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "~bootstrap/scss/bootstrap";
+
 html, body {
     height: 100%;
     margin: 0px;
+    padding: 0px;
 }
 
 .wrapper {
@@ -10,10 +13,18 @@ html, body {
   
     /* Equal to height of footer */
     /* But also accounting for potential margin-bottom of last child */
-    margin-bottom: -50px;
+    margin-bottom: -56px;
+    padding: 0px;
 }
 
 footer
 {
-    height: 50px;
+    background-color: #dddddd;
+    min-height: 50px;
+    padding: 0px;
+}
+
+.media-content {
+    padding: 5px;
+    margin: 0 auto;
 }
