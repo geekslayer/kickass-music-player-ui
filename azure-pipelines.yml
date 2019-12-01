@@ -33,4 +33,9 @@ steps:
     customCommand: 'run build-prod'
   displayName: 'Npm build'
 
-  
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'kamp-app'
+    customCommand: 'run e2e'
+  displayName: 'Npm test end-to-end'
