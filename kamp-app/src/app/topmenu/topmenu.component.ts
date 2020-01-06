@@ -11,5 +11,4 @@ export class TopmenuComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
