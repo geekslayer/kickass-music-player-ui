@@ -3,9 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { PlayerComponent } from './player/player.component';
 import { SignupComponent } from './signup/signup.component';
+import { KeycloakAuthGuard } from 'keycloak-angular';
+import { AppAuthGuard } from './authentication/appauthguard';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
+  {path: 'login', component: LoginComponent, canActivate: [AppAuthGuard]},
   {path: 'signup', component: SignupComponent},
   { path: '', component: PlayerComponent },
   // {path: '', redirectTo: '/', pathMatch: 'full' },
@@ -13,6 +15,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AppAuthGuard]
 })
 export class AppRoutingModule { }
