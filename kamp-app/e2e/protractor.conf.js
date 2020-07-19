@@ -2,9 +2,7 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
-const { SpecReporter } = require('jasmine-spec-reporter');
-
-process.env.CHROME_BIN = process.env.CHROME_BIN || require("puppeteer").executablePath();
+const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
 
 /**
  * @type { import("protractor").Config }
@@ -15,10 +13,6 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    chromeOptions: {
-      args: ["--headless", "--disable-gpu", "--window-size=1200,900"],
-      binary: process.env.CHROME_BIN
-    },
     browserName: 'chrome'
   },
   directConnect: true,
@@ -33,6 +27,10 @@ exports.config = {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.json')
     });
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+    jasmine.getEnv().addReporter(new SpecReporter({
+      spec: {
+        displayStacktrace: StacktraceOption.PRETTY
+      }
+    }));
   }
 };

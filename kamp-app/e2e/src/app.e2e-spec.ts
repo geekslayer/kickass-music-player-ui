@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display footer', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toContain('KickAss Music Player');
+    expect(page.getTitleText()).toEqual('kamp-app app is running!');
   });
 
   afterEach(async () => {

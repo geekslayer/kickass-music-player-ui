@@ -1,22 +1,9 @@
-import { KeycloakConfig } from 'keycloak-angular';
-
-// Add here your keycloak setup infos
-let keycloakConfig: KeycloakConfig = {
-  url: 'http://localhost:8080/auth',
-  realm: 'kickass-media-player',
-  clientId: 'kamp',
-  "credentials": {
-    "secret": "a095e649-b8ef-47b2-a3fa-ecc0bc2485c6"
-  }
-};
-
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  keycloak: keycloakConfig,
+  production: false
 };
 
 /*
