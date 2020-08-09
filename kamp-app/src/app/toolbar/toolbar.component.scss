@@ -1,0 +1,15 @@
+@import "../../assets/styles/variables";
+
+.navbar {
+    padding: 0.50rem 0.75rem;
+}
+
+.toolbar_background {
+    background-color: $toolbar_bg;
+}
+
+@media screen and (max-width: 600px) {
+    .hidden-text {
+        display: none;
+    }
+}
