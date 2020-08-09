@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "../../kamp-app/node_modules/bootstrap/scss/bootstrap.scss";
+@import "../src/assets/styles/variables";
 
 html, body {
     height: 100%;
@@ -15,6 +16,18 @@ html, body {
     /* But also accounting for potential margin-bottom of last child */
     margin-bottom: -56px;
     padding: 0px;
+}
+
+.form-label-group {
+    .label-left {
+        float: left;
+        padding: 0.25rem 0;
+    }
+
+    .label-right {
+        float: right;
+        padding: 0.25rem 0;
+    }
 }
 
 footer
